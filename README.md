@@ -1,2 +1,4 @@
 # Computer-Science-1-Professor-Cyrus
-Assignments and other code for CS1
+
+This repository is storing all of the homework assignment and code snippets required for Computer Science 1, Professor Cyrus Vandrevala's class (CS1-002).
+
