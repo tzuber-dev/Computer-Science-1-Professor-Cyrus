@@ -1,36 +1,25 @@
+﻿#include "switcherforemots.h"
 #include <iostream>
 #include <string>
-#include "time_functions.h"
 
 using namespace std;
 
 int main() {
-    std::string time1;
-    std::string time2;
+    std::cout << "Welcome to the Cat Word Processor! Please enter a sentence:\n";
 
-    cout << "Welcome to the Time Interval Calculation Program! (TICP) \n"<<std::endl;
+    std::string sentence;
+    std::getline(std::cin, sentence);
 
-    cout << "Provide the first time:  ";
-    cin >> time1;
+    std::string modified = replace_words(sentence);
 
-    cout << "Provide the second time:  ";
-    cin >> time2;
+    cout << "State your original sentence:\n" << sentence <<std::endl;
+    cout << "\n";
+    cout << "\n";
+    cout << "Your newly shaped sentence is:\n" << modified <<std::endl;
 
-    std:pair<int, int> startTime = parseTime(time1);
-    std::pair<int, int> endTime = parseTime(time2);
 
-    int minutesDiff = calculateMinutesDifference(startTime, endTime);
-    std::pair<int, int> hm = hoursAndMinutes(minutesDiff);
-    int hours = hm.first;
-    int minutes = hm.second;
-    double hoursDec = hoursDecimal(minutesDiff);
-
-    cout << "The time interval can be written as:"<<std::endl;
-    cout << "  1) " << minutesDiff << " minutes\n";
-    cout << "  2) " << hours << " hours and " << minutes << " minutes\n";
-    cout << "  3) " << hoursDec << " hours\n";
-
-    cout << "Thank you for using the TICP!\n";
+    cout << "==============\n"<<std::endl;
+    cout << "Have a cat-tastic day!\n";
 
     return 0;
 }
